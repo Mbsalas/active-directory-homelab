@@ -6,9 +6,19 @@ After that I set up the domain itself. I built a departmental structure using or
 
 > **Full build log:** This README is a curated walkthrough. For the complete step-by-step with every screenshot, see [`docs/full-build-log.pdf`](docs/full-build-log.pdf).
 
+## Prerequisites
+
+To follow along you need a computer with enough RAM and disk space to run three VMs at once (I'd recommend at least 16 GB of RAM), plus the following, all free:
+
+- **VMware Workstation Pro** — the software that runs the virtual machines. It's free for personal use and requires a free Broadcom account to download. [Get it here.](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)
+- **Windows Server 2025 ISO** — the operating system for the domain controller. The 180-day evaluation is free from the Microsoft Evaluation Center. [Download here.](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2025)
+- **Windows 11 ISO** — for the two client machines. The official disk image includes Pro. [Download here.](https://www.microsoft.com/software-download/windows11)
+
+Once VMware is installed, I created three VMs from those ISOs: one server (roughly 60 GB disk, 3 GB RAM) and two Windows 11 clients (60 GB disk, 4 GB RAM each). The full step-by-step for creating and installing the VMs is in the [build log PDF](docs/full-build-log.pdf). This README picks up once all three machines are running.
+
 ## The Lab
 
-Everything runs on a single laptop using VMware, on an isolated NAT network so the three machines can talk to each other but stay separate from my real network. The setup simulates a small company with one server and two employee workstations.
+Everything runs on a single host machine using VMware, on an isolated NAT network so the three machines can talk to each other but stay separate from my real network. The setup simulates a small company with one server and two employee workstations.
 
 | Role | Machine | Operating System |
 |------|---------|------------------|
